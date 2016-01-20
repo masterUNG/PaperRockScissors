@@ -2,6 +2,7 @@ package appewtc.masterung.gamepaperrockscissors;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -64,7 +65,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void changePlay(int intNumber) {
 
-    }
+        Log.d("test", "ค่าที่รับได้ = " + intNumber);
+
+    }   // changePlay
 
     private void bindWidget() {
         paperImageView = (ImageView) findViewById(R.id.imvPaper);
