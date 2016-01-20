@@ -1,5 +1,6 @@
 package appewtc.masterung.gamepaperrockscissors;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -66,6 +67,26 @@ public class MainActivity extends AppCompatActivity {
     private void changePlay(int intNumber) {
 
         Log.d("test", "ค่าที่รับได้ = " + intNumber);
+
+        int intSound = R.raw.mosquito;
+
+        switch (intNumber) {
+            case 1:
+                playImageView.setImageResource(R.drawable.paper);
+                intSound = R.raw.mosquito;
+                break;
+            case 2:
+                playImageView.setImageResource(R.drawable.rock);
+                intSound = R.raw.cow;
+                break;
+            case 3:
+                playImageView.setImageResource(R.drawable.scissors);
+                intSound = R.raw.elephant;
+                break;
+        }   // switch
+
+        MediaPlayer imageMediaPlayer = MediaPlayer.create(getBaseContext(), intSound);
+        imageMediaPlayer.start();
 
     }   // changePlay
 
