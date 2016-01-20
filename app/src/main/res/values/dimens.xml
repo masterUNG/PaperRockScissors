@@ -5,5 +5,6 @@
 
     <dimen name="h1">35sp</dimen>
     <dimen name="height">120dp</dimen>
+    <dimen name="play">240dp</dimen>
 
 </resources>
