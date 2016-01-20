@@ -2,6 +2,7 @@ package appewtc.masterung.gamepaperrockscissors;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,7 +22,49 @@ public class MainActivity extends AppCompatActivity {
         //Bind Widget
         bindWidget();
 
+        //Paper Controller
+        paperController();
+
+        //Rock Controller
+        rockController();
+
+        //Scissor Controller
+        scissorController();
+
     }   // Main Method
+
+    private void scissorController() {
+        scissorImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changePlay(3);
+            }
+        });
+    }
+
+    private void rockController() {
+        rockImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changePlay(2);
+            }
+        });
+    }
+
+    private void paperController() {
+
+        paperImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changePlay(1);
+            }
+        });
+
+    }   // paperController
+
+    private void changePlay(int intNumber) {
+
+    }
 
     private void bindWidget() {
         paperImageView = (ImageView) findViewById(R.id.imvPaper);
