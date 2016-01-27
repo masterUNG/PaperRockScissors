@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     //Explicit
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 changePlay(3);
+                myRandomPicture();
             }
         });
     }
@@ -49,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 changePlay(2);
+                myRandomPicture();
             }
         });
     }
@@ -59,10 +63,34 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 changePlay(1);
+                myRandomPicture();
             }
         });
 
     }   // paperController
+
+    private void myRandomPicture() {
+
+        int intMyRandom = 0;
+        Random objRandom = new Random();
+        intMyRandom = objRandom.nextInt(3) + 1;
+        Log.d("Ran", "intMyRandom ==> " + intMyRandom);
+
+        androidChange(intMyRandom);
+
+    }   // myRandomPicture
+
+    private void androidChange(int intMyRandom) {
+
+        int[] intSourceImage = new int[4];
+        intSourceImage[0] = 0;
+        intSourceImage[1] = R.drawable.paper;
+        intSourceImage[2] = R.drawable.rock;
+        intSourceImage[3] = R.drawable.scissors;
+
+        androidImageView.setImageResource(intSourceImage[intMyRandom]);
+
+    }   // androidChange
 
     private void changePlay(int intNumber) {
 
