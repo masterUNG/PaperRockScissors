@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 changePlay(3);
                 myRandomPicture();
 
+
             }
         });
     }
