@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 changePlay(3);
                 myRandomPicture();
+
             }
         });
     }
